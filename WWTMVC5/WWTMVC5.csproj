@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -531,14 +531,6 @@
     <Compile Include="ViewModels\TopCategoryViewModel.cs" />
     <Compile Include="ViewModels\UploadAssetViewModel.cs" />
     <Compile Include="ViewModels\VideoDataViewModel.cs" />
-    <Compile Include="webclient\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="webclient\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="WebServices\IResourceService.cs" />
     <Compile Include="WebServices\LiveIdAuth.svc.cs">
       <DependentUpon>LiveIdAuth.svc</DependentUpon>
@@ -914,7 +906,6 @@
     <Content Include="webclient\dataproxy\Places.js" />
     <Content Include="webclient\dataproxy\SearchData.js" />
     <Content Include="webclient\dataproxy\Tours.js" />
-    <Content Include="webclient\Default.aspx" />
     <Content Include="webclient\directives\ContextMenu.js" />
     <Content Include="webclient\directives\editslidevalues.js" />
     <Content Include="webclient\directives\Localize.js" />
@@ -1027,7 +1018,6 @@
     <Content Include="webclient\images\uranus.jpg" />
     <Content Include="webclient\images\venus.jpg" />
     <Content Include="webclient\images\wwtlogo.png" />
-    <Content Include="webclient\login.aspx" />
     <Content Include="webclient\sdk.js" />
     <Content Include="webclient\sdk\wwtsdk.js" />
     <Content Include="webclient\sdk\wwtsdk.min.js" />
@@ -1145,9 +1135,26 @@
     <Content Include="webclient\css\fonts\tinymce.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Home\" />
-    <Folder Include="Views\Resources\" />
-    <Folder Include="Views\WCF\" />
+    <Content Include="Views\Use\DomeProject.cshtml" />
+    <Content Include="Views\Use\Educators.cshtml" />
+    <Content Include="Views\Use\Embed.cshtml" />
+    <Content Include="Views\Use\Impacts.cshtml" />
+    <Content Include="Views\Use\Index.cshtml" />
+    <Content Include="Views\Use\LeftNav.cshtml" />
+    <Content Include="Views\Use\Planetariums.cshtml" />
+    <Content Include="Views\Use\Researchers.cshtml" />
+    <Content Include="Views\Use\Tools.cshtml" />
+    <Content Include="Views\Use\TourAssets.cshtml" />
+    <Content Include="Views\Use\WWTPlanetarium.cshtml" />
+    <Content Include="Views\Learn\Advanced.cshtml" />
+    <Content Include="Views\Learn\DevGuide.cshtml" />
+    <Content Include="Views\Learn\LeftNav.cshtml" />
+    <Content Include="Views\Learn\UserGuide.cshtml" />
+    <Content Include="Views\Learn\WebDevelopment.cshtml" />
+    <Content Include="Views\GetInvolved\Develop.cshtml" />
+    <Content Include="Views\GetInvolved\HelpOthers.cshtml" />
+    <Content Include="Views\GetInvolved\Index.cshtml" />
+    <Content Include="Views\GetInvolved\LeftNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -1268,6 +1275,11 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Resources\" />
+    <Folder Include="Views\WCF\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1303,7 +1315,7 @@
     </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>cd $(TargetDir)  
+    <PreBuildEvent>cd $(TargetDir)
 setlocal enableDelayedExpansion
 (
   xcopy ..\References\msshrtmi.dll $(TargetDir)
