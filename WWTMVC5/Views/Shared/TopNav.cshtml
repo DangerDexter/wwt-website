@@ -20,6 +20,12 @@
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav social">
             <li class="social">
+                <a class="social" target="social" href="/Home" data-toggle="tooltip" data-placement="bottom"
+                   data-title="Back to home page">
+                    <i class="fa fa-home text-info" style="margin-top: 4px;"></i>
+                </a>
+            </li>
+            <li class="social">
                 @if (Model.User != null)
                 {
                     <div id="signinContainer" loggedIn="true">
@@ -91,8 +97,8 @@
         </ul>
         <ul class="nav navbar-nav">
             <li class="dropdown" runat="server" id="topNav_Learn">
-                <a href="javascript:void(0)" title="Learn WWT" class="dropdown-toggle" data-toggle="dropdown">
-                    Learn WWT <i class="fa fa-angle-down"></i>
+                <a href="javascript:void(0)" title="Learn" class="dropdown-toggle" data-toggle="dropdown">
+                    Learn <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/Learn/">Getting Started</a></li>
@@ -102,8 +108,8 @@
 
             </li>
             <li class="dropdown" runat="server" id="topNav_Interact">
-                <a href="javascript:void(0)" title="Use WWT" class="dropdown-toggle" data-toggle="dropdown">
-                    Use WWT <i class="fa fa-angle-down"></i>
+                <a href="javascript:void(0)" title="Use" class="dropdown-toggle" data-toggle="dropdown">
+                    Use <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/webclient"><strong>Use WWT on the Web</strong></a></li>
@@ -126,7 +132,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="/GetInvolved/">Join Us!</a></li>
                     <li><a href="/GetInvolved/HelpOthers">Help Others Learn WWT</a></li>
-                    <li><a href="/GetInvolved/Develop">Develop WWT</a></li>
+                    <li><a href="/GetInvolved/Develop">Develop</a></li>
                     <li class="divider"></li>
                     <li><a href="/Community/">Community Content</a></li>
                     <li id="profileMenuItem" class="@(Model.User == null ? "hide" : "")"><a href="/Community/Profile">My Profile</a></li>
